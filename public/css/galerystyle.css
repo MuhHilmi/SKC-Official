@@ -33,6 +33,13 @@ div.main div.galeri div.row div.post article div.post-img {
     align-items: center;
     margin-block: 1rem;
 }
+div.col-md-4 {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+div.col-md-4:hover {
+    transform: scale(1.05);
+}
 footer {
     background-color: #222;
     color: #fff;

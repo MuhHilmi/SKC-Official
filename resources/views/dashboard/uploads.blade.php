@@ -17,6 +17,11 @@
                 <label for="deskripsi" class="form-label">Deskripsi (opsional)</label>
                 <textarea name="deskripsi" class="form-control" rows="3"></textarea>
             </div>
+            
+            <div class="mb-3">
+                <label for="link" class="form-label">Link</label>
+                <textarea name="link" class="form-control" rows="3"></textarea>
+            </div>
 
             <div class="mb-3">
                 <label for="gambar" class="form-label">Upload Gambar</label>
