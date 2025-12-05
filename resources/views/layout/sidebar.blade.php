@@ -84,19 +84,70 @@
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
+
+                    <!-- LEVEL 1: Tahun Ajar -->
                     <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="/dashboard/gelombangsatu" class="nav-link">
+
+                        <!-- Tahun Ajar 2024/2025 -->
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Gelombang 1</p>
+                                <p>
+                                    Tahun Ajar 2024/2025
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
                             </a>
+
+                            <!-- LEVEL 2: Gelombang -->
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/dashboard/2024/gelombang1" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Gelombang 1</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/dashboard/2024/gelombang2" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Gelombang 2</p>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a href="/dashboard/gelombangdua" class="nav-link">
+
+                        <!-- Tahun Ajar 2025/2026 -->
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Gelombang 2</p>
+                                <p>
+                                    Tahun Ajar 2025/2026
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
                             </a>
+
+                            <!-- LEVEL 2: Gelombang -->
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/dashboard/2025/gelombangsatu" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Gelombang 1</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/dashboard/2025/gelombangdua" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Gelombang 2</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/dashboard/2025/gelombangtiga" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Gelombang 3</p>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
+
                     </ul>
                 </li>
             </ul>

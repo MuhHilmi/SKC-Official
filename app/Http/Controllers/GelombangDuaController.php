@@ -13,7 +13,7 @@ class GelombangDuaController extends Controller
     public function index()
     {
         $gelombangdua = GelombangDua::all();
-        return view('dashboard.gelombangdua', compact('gelombangdua'));
+        return view('dashboard.2025.gelombangdua', compact('gelombangdua'));
     }
 
     /**
@@ -21,7 +21,7 @@ class GelombangDuaController extends Controller
      */
     public function create()
     {
-        return view('dashboard.gelombangdua.create');
+        return view('dashboard.2025.gelombangdua.create');
     }
 
     /**
@@ -30,7 +30,7 @@ class GelombangDuaController extends Controller
     public function store(Request $request)
     {
         GelombangDua::create($request->all());
-        return redirect()->route('dashboard.gelombangdua.index');
+        return redirect()->route('dashboard.2025.gelombangdua.index');
     }
 
     /**
@@ -38,7 +38,7 @@ class GelombangDuaController extends Controller
      */
     public function show(GelombangDua $gelombangDua)
     {
-        return view('dashboard.gelombangdua.show', compact('gelombangDua'));
+        return view('dashboard.2025.gelombangdua.show', compact('gelombangDua'));
     }
 
     /**
@@ -46,7 +46,7 @@ class GelombangDuaController extends Controller
      */
     public function edit(GelombangDua $gelombangDua)
     {
-        return view('dashboard.gelombangdua.edit', compact('gelombangDua'));
+        return view('dashboard.2025.gelombangdua.edit', compact('gelombangDua'));
     }
 
     /**
@@ -55,7 +55,7 @@ class GelombangDuaController extends Controller
     public function update(Request $request, GelombangDua $gelombangDua)
     {
         $gelombangDua->update($request->all());
-        return redirect()->route('dashboard.gelombangdua.index');
+        return redirect()->route('dashboard.2025.gelombangdua.index');
     }
 
     /**
@@ -64,6 +64,6 @@ class GelombangDuaController extends Controller
     public function destroy(GelombangDua $gelombangDua)
     {
         $gelombangDua->delete();
-        return redirect()->route('dashboard.gelombangdua.index');
+        return redirect()->route('dashboard.2025.gelombangdua.index');
     }
 }
