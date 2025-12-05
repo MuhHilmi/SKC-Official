@@ -17,7 +17,7 @@ class SiswaSeeder extends Seeder
         $faker = \Faker\Factory::create();
 
         foreach (range(1, 10) as $index) {
-            DB::table('gelombangtiga')->insert([
+            DB::table('gelombangsatu')->insert([
                 'nama' => $faker->name,
                 'jurusan' => $faker->randomElement(['Teknologi Laboratorium Medik', 'Asisten Keperawatan', 'Farmasi Klinis dan Komunitas']),
                 'jurusan_2' => $faker->randomElement(['Asisten Keperawatan', 'Farmasi Klinis dan Komunitas', 'Teknologi Laboratorium Medik']),

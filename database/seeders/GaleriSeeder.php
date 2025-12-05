@@ -15,10 +15,11 @@ class GaleriSeeder extends Seeder
     {
         $faker = \Faker\Factory::create();
         
-        foreach (range(1, 10) as $index) {
+        foreach (range(1, 5) as $index) {
             DB::table('galeris')->insert([
                 'gambar' => $faker->imageUrl(640, 480, 'cats'),
                 'deskripsi' => $faker->sentence,
+                'link' => $faker->url,
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);

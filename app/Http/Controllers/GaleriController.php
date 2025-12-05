@@ -33,6 +33,7 @@ class GaleriController extends Controller
         $request->validate([
             'gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5120',
             'deskripsi' => 'required',
+            'link' => 'required',
         ]);
 
         $path = $request->file('gambar')->store('galeri', 'public');
@@ -41,6 +42,7 @@ class GaleriController extends Controller
         Galeri::create([
             'gambar' => $path,
             'deskripsi' => $request->deskripsi,
+            'link' => $request->link,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
