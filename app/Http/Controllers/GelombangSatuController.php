@@ -13,7 +13,7 @@ class GelombangSatuController extends Controller
     public function index()
     {
         $gelombangsatu = GelombangSatu::all();
-        return view('dashboard.gelombangsatu', compact('gelombangsatu'));
+        return view('dashboard.2025.gelombangsatu', compact('gelombangsatu'));
     }
 
     /**
@@ -21,7 +21,7 @@ class GelombangSatuController extends Controller
      */
     public function create()
     {
-        return view('dashboard.gelombangsatu.create');
+        return view('dashboard.2025.gelombangsatu.create');
     }
 
     /**
@@ -30,7 +30,7 @@ class GelombangSatuController extends Controller
     public function store(Request $request)
     {
         GelombangSatu::create($request->all());
-        return redirect()->route('dashboard.gelombangsatu.index');
+        return redirect()->route('dashboard.2025.gelombangsatu.index');
     }
 
     /**
@@ -38,7 +38,7 @@ class GelombangSatuController extends Controller
      */
     public function show(GelombangSatu $gelombangSatu)
     {
-        return view('dashboard.gelombangsatu.show', compact('gelombangSatu'));
+        return view('dashboard.2025.gelombangsatu.show', compact('gelombangSatu'));
     }
 
     /**
@@ -46,7 +46,7 @@ class GelombangSatuController extends Controller
      */
     public function edit(GelombangSatu $gelombangSatu)
     {
-        return view('dashboard.gelombangsatu.edit', compact('gelombangSatu'));
+        return view('dashboard.2025.gelombangsatu.edit', compact('gelombangSatu'));
     }
 
     /**
@@ -55,7 +55,7 @@ class GelombangSatuController extends Controller
     public function update(Request $request, GelombangSatu $gelombangSatu)
     {
         $gelombangSatu->update($request->all());
-        return redirect()->route('dashboard.gelombangsatu.index');
+        return redirect()->route('dashboard.2025.gelombangsatu.index');
     }
 
     /**
@@ -64,6 +64,6 @@ class GelombangSatuController extends Controller
     public function destroy(GelombangSatu $gelombangSatu)
     {
         $gelombangSatu->delete();
-        return redirect()->route('dashboard.gelombangsatu.index');
+        return redirect()->route('dashboard.2025.gelombangsatu.index');
     }
 }

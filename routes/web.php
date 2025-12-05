@@ -9,6 +9,7 @@ use App\Http\Controllers\{
     StudentController,
     GelombangSatuController,
     GelombangDuaController,
+    GelombangTigaController,
 };
 
 // ====================
@@ -55,13 +56,19 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // ROUTE GELOMBANG SATU
     // ====================
     Route::resource('gelombangsatu', GelombangSatuController::class)->except(['show']);
-    Route::get('/dashboard/gelombangsatu', [GelombangSatuController::class, 'index'])->name('dashboard.gelombangsatu');
+    Route::get('/dashboard/2025/gelombangsatu', [GelombangSatuController::class, 'index'])->name('dashboard.2025.gelombangsatu');
 
     // ====================
     // ROUTE GELOMBANG DUA
     // ====================
     Route::resource('gelombangdua', GelombangDuaController::class)->except(['show']);
-    Route::get('/dashboard/gelombangdua', [GelombangDuaController::class, 'index'])->name('dashboard.gelombangdua');
+    Route::get('/dashboard/2025/gelombangdua', [GelombangDuaController::class, 'index'])->name('dashboard.2025.gelombangdua');
+
+    // ====================
+    // ROUTE GELOMBANG TIGA
+    // ====================
+    Route::resource('gelombangtiga', GelombangTigaController::class)->except(['show']);
+    Route::get('/dashboard/2025/gelombangtiga', [GelombangTigaController::class, 'index'])->name('dashboard.2025.gelombangtiga');
 });
 
 // ====================
