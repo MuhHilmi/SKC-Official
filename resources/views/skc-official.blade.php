@@ -78,7 +78,7 @@
                 <!-- Video -->
                 <div class="video-profile-video">
                     <video controls playsinline preload="metadata" poster="/pic/bg2.jpg">
-                        <source src="/pic/video-profile.mp4" type="video/mp4">
+                        <source src="/vid/video-profile.mp4" type="video/mp4">
                         Browser Anda tidak mendukung pemutaran video.
                     </video>
                 </div>
