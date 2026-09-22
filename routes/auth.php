@@ -9,9 +9,9 @@ use App\Http\Controllers\Auth\{
     NewPasswordController,
     PasswordController,
     PasswordResetLinkController,
-    RegisteredUserController,
     VerifyEmailController
-};
+    };
+    // RegisteredUserController,
 
 /*
 |--------------------------------------------------------------------------
@@ -20,8 +20,8 @@ use App\Http\Controllers\Auth\{
 */
 Route::middleware('guest')->group(function () {
     // Registration Routes (under auth to restrict access, adjust if needed)
-    Route::get('register', [RegisteredUserController::class, 'create'])->name('register');
-    Route::post('register', [RegisteredUserController::class, 'store']);
+    // Route::get('register', [RegisteredUserController::class, 'create'])->name('register');
+    // Route::post('register', [RegisteredUserController::class, 'store']);
 
     // Login Routes
     Route::get('login', [AuthenticatedSessionController::class, 'create'])->name('login');
