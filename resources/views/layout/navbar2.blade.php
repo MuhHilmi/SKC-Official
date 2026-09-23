@@ -24,6 +24,9 @@
                     <a class="nav-link active" href="/galeri">Galeri</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link active" href="{{ route('blog.index') }}">Blog</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link active" href="/error">Profil</a>
                 </li>
                 <li class="nav-item">
