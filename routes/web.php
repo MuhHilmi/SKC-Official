@@ -75,6 +75,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // ROUTE Blog (Artikel)
     // ====================
     Route::get('/dashboard/blog', [BlogAdminController::class, 'index'])->name('dashboard.blog.index');
+    Route::get('/dashboard/blog/create', [BlogAdminController::class, 'create'])->name('dashboard.blog.create');
+    Route::post('/dashboard/blog', [BlogAdminController::class, 'store'])->name('dashboard.blog.store');
 });
 
 // ====================
