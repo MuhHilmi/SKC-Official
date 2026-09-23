@@ -49,7 +49,7 @@
                                             @endforeach
                                         </div>
                                     @endif
-                                    <input type="text" name="kategori_baru" class="form-control" value="{{ old('kategori_baru') }}" aceholder="Kategori baru, pisahkan dengan koma (mis: Prestasi, Pengumuman)">
+                                    <input type="text" name="kategori_baru" class="form-control" value="{{ old('kategori_baru') }}" placeholder="Kategori baru, pisahkan dengan koma (mis: Prestasi, Pengumuman)">
                                     <small class="text-muted">
                                         Kategori yang belum ada akan otomatis dibuat.
                                     </small>
@@ -78,14 +78,33 @@
 
 @push('scripts')
     {{-- TinyMCE community edition, di-host dari jsDelivr (open source, tanpa perlu API key) --}}
-    <script src="https://cdn.jsdelivr.net/npm/tinymce@6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/8/tinymce.min.js" referrerpolicy="origin" crossorigin="anonymous"></script>
     <script>
         tinymce.init({
             selector: '#konten',
             height: 420,
             menubar: false,
-            plugins: 'lists link code table',
-            toolbar: 'undo redo | blocks | bold italic underline | bullist numlist | link table | removeformat code',
+            plugins: 'lists link code table wordcount',
+            toolbar: 'undo redo | blocks | bold italic underline strikethrough | ' +
+                'forecolor backcolor | alignleft aligncenter alignright alignjustify | ' +
+                'bullist numlist outdent indent | blockquote hr | link table | removeformat code',
+            // Tampilan di dalam editor dibuat semirip mungkin dengan tampilan
+            // akhir di halaman blog publik, supaya WYSIWYG (what you see is
+            // what you get) benar-benar apa adanya.
+            content_style: `
+                body {
+                    font-family: Arial, sans-serif;
+                    font-size: 16px;
+                    line-height: 1.6;
+                }
+                p { margin-bottom: 1rem; }
+                blockquote {
+                    border-left: 4px solid #ccc;
+                    margin-left: 0;
+                    padding-left: 1rem;
+                    color: #555;
+                }
+            `,
             // Catatan: upload gambar di dalam isi artikel belum aktif di tahap ini.
             // Hanya "Gambar Sampul" di atas yang bisa diupload untuk saat ini.
         });

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
     BlogAdminController,
+    BlogController,
     DashboardController,
     GaleriController,
     PendaftaranController,
@@ -23,6 +24,12 @@ Route::view('/informasi', 'informasi', ['title' => 'informasi']);
 Route::view('/ppdb', 'ppdb');
 Route::view('/error', 'maintenance');
 Route::view('/profilsekolah', 'informasisekolah');
+
+// Rute /blog/{slug} didaftarkan lebih spesifik lewat parameter, jadi harus
+// setelah rute statis lain agar tidak bentrok jika suatu saat ada halaman
+// bernama sama persis dengan sebuah slug.
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 
 // ====================
 // ROUTE INFORMASI JURUSAN
