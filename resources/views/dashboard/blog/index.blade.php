@@ -53,8 +53,14 @@
                                             <td>{{ optional($post->published_at)->format('d-m-Y') ?? '-' }}</td>
                                             <td>
                                                 {{-- Tombol akan aktif pada tahap selanjutnya --}}
-                                                <a href="#" class="btn btn-sm btn-outline-secondary disabled">Edit</a>
-                                                <a href="#" class="btn btn-sm btn-outline-danger disabled">Hapus</a>
+                                                <a href="{{ route('dashboard.blog.edit', $post) }}" class="btn btn-sm btn-outline-secondary">Edit</a>
+                                                <form action="{{ route('dashboard.blog.destroy', $post) }}" method="POST" class="d-inline" onsubmit="return confirm('Apakah Anda yakin ingin menghapus artikel ini?');">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-sm btn-outline-danger">
+                                                        Hapus
+                                                    </button>
+                                                </form>
                                             </td>
                                         </tr>
                                     @empty

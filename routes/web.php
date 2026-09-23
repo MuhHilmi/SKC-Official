@@ -77,6 +77,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard/blog', [BlogAdminController::class, 'index'])->name('dashboard.blog.index');
     Route::get('/dashboard/blog/create', [BlogAdminController::class, 'create'])->name('dashboard.blog.create');
     Route::post('/dashboard/blog', [BlogAdminController::class, 'store'])->name('dashboard.blog.store');
+    Route::get('/dashboard/blog/{blogPost}/edit', [BlogAdminController::class, 'edit'])->name('dashboard.blog.edit');
+    Route::put('/dashboard/blog/{blogPost}', [BlogAdminController::class, 'update'])->name('dashboard.blog.update');
+    Route::delete('/dashboard/blog/{blogPost}', [BlogAdminController::class, 'destroy'])->name('dashboard.blog.destroy');
 });
 
 // ====================
