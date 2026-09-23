@@ -41,7 +41,7 @@
         </div>
     </div>
     {{-- List Guru Kejuruan end --}}
-
+    
     {{-- List Seragam --}}
     <div class="seragam pt-5">
         <h3>Seragam</h3>
