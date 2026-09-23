@@ -11,13 +11,14 @@
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <h1 class="h4 mb-0">Kelola Blog</h1>
-                                {{-- Tombol "Tulis Artikel" akan mengarah ke form create pada tahap selanjutnya --}}
-                                <a href="#" class="btn btn-primary disabled">&plus; Tulis Artikel</a>
+                                <a href="{{ route('dashboard.blog.create') }}" class="btn btn-primary">
+                                    &plus; Tulis Artikel
+                                </a>
                             </div>
                             @if (session('success'))
                                 <div class="alert alert-success">{{ session('success') }}</div>
                             @endif
-                            <table class="table table-bordered table-striped" style="white-space: nowrap">
+                            <table class="table table-bordered table-striped" style="white-space: nowrap;">
                                 <thead>
                                     <tr>
                                         <th>No.</th>
@@ -32,12 +33,12 @@
                                 <tbody>
                                     @forelse ($posts as $post)
                                         <tr>
-                                            <td>{{ $loop->iteration + ($post->currentPage() - 1) * $posts->perPage() }}</td>
+                                            <td>{{ $loop->iteration + ($posts->currentPage() - 1) * $posts->perPage() }}</td>
                                             <td>{{ $post->judul }}</td>
                                             <td>{{ $post->author->name ?? '-' }}</td>
                                             <td>
                                                 @forelse ($post->categories as $category)
-                                                    <span class="badge bg-secondary">{{ $category->name }}</span>
+                                                    <span class="badge bg-secondary">{{ $category->nama }}</span>
                                                 @empty
                                                     <span class="text-muted">-</span>
                                                 @endforelse
@@ -46,7 +47,7 @@
                                                 @if ($post->status === 'published')
                                                     <span class="badge bg-success">Published</span>
                                                 @else
-                                                    <span class="badge bg-warning">Draft</span>
+                                                    <span class="badge bg-warning text-dark">Draft</span>
                                                 @endif
                                             </td>
                                             <td>{{ optional($post->published_at)->format('d-m-Y') ?? '-' }}</td>
