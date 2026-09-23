@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
+    BlogAdminController,
     DashboardController,
     GaleriController,
     PendaftaranController,
@@ -69,6 +70,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // ====================
     Route::resource('gelombangtiga', GelombangTigaController::class)->except(['show']);
     Route::get('/dashboard/2025/gelombangtiga', [GelombangTigaController::class, 'index'])->name('dashboard.2025.gelombangtiga');
+
+    // ====================
+    // ROUTE Blog (Artikel)
+    // ====================
+    Route::get('/dashboard/blog', [BlogAdminController::class, 'index'])->name('dashboard.blog.index');
 });
 
 // ====================
