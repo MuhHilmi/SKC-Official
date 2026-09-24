@@ -50,3 +50,31 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+    {{-- Menyamakan tampilan hasil format (blockquote, list, dsb) dengan yang
+    terlihat di editor TinyMCE saat admin menulis, supaya benar-benar WYSIWYG. --}}
+    <style>
+        .blog-content {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .blog-content p {
+            margin-bottom: 1rem;
+        }
+
+        .blog-content blockquote {
+            border-left: 4px solid #ccc;
+            margin-left: 0;
+            padding-left: 1rem;
+            color: #555;
+        }
+
+        .blog-content ul,
+        .blog-content ol {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+    </style>
+@endpush

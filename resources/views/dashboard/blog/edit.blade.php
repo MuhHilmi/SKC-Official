@@ -100,8 +100,24 @@
             selector: '#konten',
             height: 420,
             menubar: false,
-            plugins: 'lists link code table',
-            toolbar: 'undo redo | blocks | bold italic underline | bullist numlist | link table | removeformat code',
+            plugins: 'lists link code table wordcount',
+            toolbar: 'undo redo | blocks | bold italic underline strikethrough | ' +
+                'forecolor backcolor | alignleft aligncenter alignright alignjustify | ' +
+                'bullist numlist outdent indent | blockquote hr | link table | removeformat code',
+            content_style: `
+                body {
+                    font-family: Arial, sans-serif;
+                    font-size: 16px;
+                    line-height: 1.6;
+                }
+                p { margin-bottom: 1rem; }
+                blockquote {
+                    border-left: 4px solid #ccc;
+                    margin-left: 0;
+                    padding-left: 1rem;
+                    color: #555;
+                }
+            `,
         });
     </script>
 @endpush
