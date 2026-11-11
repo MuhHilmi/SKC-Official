@@ -12,27 +12,14 @@ body {
     font-style: normal;
     font-weight: 400;
 }
-.logo-ppdb {
-    color: #fff;
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    padding-bottom: 2rem;
-    padding-top: 2rem;
-    background-image: url(/pic/bg3.jpg);
-    background-size: cover;
-    background-position: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 1rem;
+.logo {
+    padding-block: 2rem;
+    padding-inline: 2rem;
 }
-.logo-ppdb img {
-    height: 100px;
+.logo-png {
+    display: block;
     max-width: 100%;
-}
-.logo-ppdb p {
-    font-size: 25px;
-    text-transform: uppercase;
+    border-radius: 1rem;
 }
 a {
     color: #fff;
@@ -189,12 +176,6 @@ footer {
     header {
         font-size: 30px;
     }
-    .logo-ppdb img {
-        height: 60px;
-    }
-    .logo-ppdb p {
-        font-size: 18px;
-    }
     .table-container {
         gap: 10px;
         grid-template-columns: 1fr;
@@ -236,12 +217,6 @@ footer {
 @media screen and (max-width: 768px) {
     header {
         font-size: 30px;
-    }
-    .logo-ppdb img {
-        height: 60px;
-    }
-    .logo-ppdb p {
-        font-size: 18px;
     }
     .table-container {
         grid-template-columns: 1fr;

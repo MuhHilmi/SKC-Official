@@ -21,7 +21,8 @@ Route::view('/', 'skc-official', ['title' => 'skc-official']);
 Route::view('/about', 'welcome');
 Route::view('/galeri', 'galeri')->name('galeri.index');
 Route::view('/informasi', 'informasi', ['title' => 'informasi']);
-Route::view('/ppdb', 'ppdb');
+Route::view('/ppdb', 'ppdb-landing');
+Route::view('/formulir-pendaftaran', 'ppdb');
 Route::view('/error', 'maintenance');
 Route::view('/profilsekolah', 'informasisekolah');
 
