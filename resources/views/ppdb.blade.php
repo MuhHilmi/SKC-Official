@@ -39,9 +39,9 @@
                     <div class="form-group">
                         <select class="isi-option" name="jurusan" id="jurusan" required>
                             <option disabled hidden selected>Pilih Jurusan</option>
-                            <option value="Asisten Keperawatan">Asisten Keperawatan</option>
-                            <option value="Farmasi Klinis dan Komunitas">Farmasi Klinis dan Komunitas</option>
-                            <option value="Teknologi Laboratorium Medik">Teknologi Laboratorium Medik</option>
+                            <option value="Layanan Kesehatan">Layanan Kesehatan</option>
+                            <option value="Teknologi Farmasi">Teknologi Farmasi</option>
+                            <option value="Teknik Laboratorium Medik">Teknik Laboratorium Medik</option>
                         </select>
                     </div>
                 </div>
@@ -52,9 +52,9 @@
                     <div class="form-group">
                         <select class="isi-option" name="jurusan_2" id="jurusan_2" required>
                             <option disabled hidden selected>--Pilih Jurusan--</option>
-                            <option value="Asisten Keperawatan">Asisten Keperawatan</option>
-                            <option value="Farmasi Klinis dan Komunitas">Farmasi Klinis dan Komunitas</option>
-                            <option value="Teknologi Laboratorium Medik">Teknologi Laboratorium Medik</option>
+                            <option value="Layanan Kesehatan">Layanan Kesehatan</option>
+                            <option value="Teknologi Farmasi">Teknologi Farmasi</option>
+                            <option value="Teknik Laboratorium Medik">Teknik Laboratorium Medik</option>
                         </select>
                     </div>
                 </div>

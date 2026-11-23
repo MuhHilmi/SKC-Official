@@ -17,6 +17,9 @@
     {{-- style css bootstrap --}}
     <link href="{{ asset('dist/css/bootstrap.min.css') }}" rel="stylesheet">
 
+    {{-- Style tambahan per halaman --}}
+    @stack('styles')
+
     <title>@yield('title')</title>
 </head>
 

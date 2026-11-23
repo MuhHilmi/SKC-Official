@@ -19,8 +19,8 @@ class SiswaSeeder extends Seeder
         foreach (range(1, 10) as $index) {
             DB::table('gelombangsatu')->insert([
                 'nama' => $faker->name,
-                'jurusan' => $faker->randomElement(['Teknologi Laboratorium Medik', 'Asisten Keperawatan', 'Farmasi Klinis dan Komunitas']),
-                'jurusan_2' => $faker->randomElement(['Asisten Keperawatan', 'Farmasi Klinis dan Komunitas', 'Teknologi Laboratorium Medik']),
+                'jurusan' => $faker->randomElement(['Teknik Laboratorium Medik', 'Layanan Kesehatan', 'Teknologi Farmasi']),
+                'jurusan_2' => $faker->randomElement(['Layanan Kesehatan', 'Teknologi Farmasi', 'Teknik Laboratorium Medik']),
                 'tempat_lahir' => $faker->city,
                 'tanggal_lahir' => $faker->date,
                 'alamat' => $faker->address,

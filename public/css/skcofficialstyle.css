@@ -1,35 +1,56 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+/* ========================================
+   Base / Body
+   ======================================== */
 body {
     background-attachment: fixed;
-    background-image: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ),
-        url(/pic/bg.jpg);
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/pic/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+/* ========================================
+   Header / Navigation
+   ======================================== */
 .navigasi {
-    font-family: Bebas Neue, sans-serif;
+    font-family: "Bebas Neue", sans-serif;
     font-size: 25px;
-    font-style: normal;
     font-weight: 400;
 }
+
+/* ========================================
+   Main
+   ======================================== */
+
+section.main {
+    margin-block: 12rem;
+}
+
+/* ========================================
+   Logo Sekolah
+   ======================================== */
 .logoskc {
     display: flex;
     height: 200px;
     justify-content: center;
-    margin-top: 160px;
 }
+
+/* ========================================
+   Judul Sekolah
+   ======================================== */
 .jdl {
     color: #fff;
     font-size: 50px;
+    font-weight: bold;
     text-align: center;
     text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.7);
     text-transform: uppercase;
-    font-weight: bold;
 }
+
+/* ========================================
+   Logo Jurusan
+   ======================================== */
 .logo-jurusan {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -38,133 +59,213 @@ body {
     margin-left: 20%;
     margin-right: 20%;
 }
+
 .logo-jurusan img {
     height: 150px;
 }
+
 .logo-jurusan img:hover {
-    transform: scale(1.1);
     transition: transform 0.3s ease;
+    transform: scale(1.1);
 }
-footer {
-    background-color: #222;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    margin-top: 200px;
-    padding: 20px;
-}
-.footer-right {
-    text-align: right;
-}
-.footer-right p {
-    margin: 5px 0;
-}
-.footer-right a {
-    color: #4caf50;
-    text-decoration: none;
-}
-.footer-right a:hover {
-    text-decoration: underline;
-}
-.social-media a {
-    color: #4caf50;
-    margin: 0 5px;
-    text-decoration: none;
-}
-.social-media a:hover {
-    text-decoration: underline;
-}
+
+/* ========================================
+   Tombol Daftar
+   ======================================== */
 .btn-daftar {
-    text-align: center;
     margin-top: 4rem;
+    text-align: center;
 }
+
 .btn-daftar > a {
+    background-color: green;
+    border-radius: 1rem;
     color: white;
-    text-decoration: none;
     font-size: large;
     font-weight: bold;
-    background-color: green;
-    padding-inline: 2rem;
-    padding-block: 1.5rem;
-    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    text-decoration: none;
 }
-.video-profile {
-    margin-top: 2rem;
+
+/* ========================================
+   Logo Upcoming Jurusan
+   ======================================== */
+
+
+/* Coming Soon Section */
+.coming-soon-section {
+    margin-top: 4rem;
+    padding: 80px 0;
+}
+
+/* Card */
+.coming-soon-card {
     position: relative;
+    background: #ffffff;
+    border: 1px solid #e2eaf3;
+    border-radius: 16px;
+    padding: 35px 30px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(21, 52, 91, 0.06);
+    transition: all 0.3s ease;
+}
+
+.coming-soon-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(21, 52, 91, 0.12);
+}
+
+/* Card Label */
+.card-label {
+    margin-bottom: 18px;
+}
+
+.card-label span {
+    display: inline-block;
+    background: #eaf2ff;
+    color: #2563eb;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Logo Name */
+.logo-name {
+    color: #15345b;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* Logo Wrapper */
+.logo-wrapper {
+    width: 100%;
+    height: 180px;
+    background: #f5f8fc;
+    border: 1px dashed #cbd8e8;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.school-logo {
+    max-width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+}
+
+/* Coming Soon Status */
+.coming-soon-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.coming-soon-status h4 {
+    color: #2563eb;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.status-line {
+    width: 25px;
+    height: 2px;
+    background: #2563eb;
+    border-radius: 5px;
+}
+
+/* Description */
+.card-description {
+    color: #8a99aa;
+    font-size: 13px;
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+
+/* ========================================
+   Video Profile Section
+   ======================================== */
+.video-profile {
+    background-color: #fff;
+    margin-top: 2rem;
     overflow: hidden;
     padding: 100px 20px 160px;
-    /* background-image: url("/pic/bg2.jpg"); */
-    /* background-size: cover; */
-    /* background-position: center; */
-    /* background-repeat: no-repeat; */
-    color: #fff;
+    position: relative;
 }
 
 /* Overlay */
 .video-profile-overlay {
-    position: absolute;
     inset: 0;
-    /* background: linear-gradient(180deg, #ffffff00 0%, #00000080 100%); */
+    position: absolute;
 }
 
 /* Container */
 .video-profile-container {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    max-width: 1100px;
     margin: 0 auto;
+    max-width: 1100px;
+    position: relative;
+    width: 100%;
+    z-index: 2;
 }
 
 /* Heading */
 .video-profile-heading {
-    text-align: center;
     margin-bottom: 40px;
-}
-
-.video-profile-heading h3 {
-    margin: 0 0 15px;
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 1px;
+    text-align: center;
 }
 
 .video-profile-heading h2 {
-    margin: 0;
     font-size: 42px;
     font-weight: 700;
+    margin: 0;
+}
+
+.video-profile-heading h3 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0 0 15px;
 }
 
 /* Divider */
 .video-profile-divider {
-    width: 70px;
+    background: #fff;
     height: 3px;
     margin: 20px auto 0;
-    background: #fff;
+    width: 70px;
 }
 
 /* Video */
 .video-profile-video {
-    position: relative;
-    width: 100%;
     aspect-ratio: 16 / 9;
+    background: #000;
     margin: 0 auto 45px;
     overflow: hidden;
-    background: #000;
+    position: relative;
+    width: 100%;
 }
 
 .video-profile-video video {
-    width: 100%;
-    height: 100%;
-    display: block;
     border: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
 }
 
 /* Content */
 .video-profile-content {
-    max-width: 900px;
-    margin: 0 auto;
     font-size: 17px;
     line-height: 1.8;
+    margin: 0 auto;
+    max-width: 900px;
     text-align: left;
 }
 
@@ -173,67 +274,135 @@ footer {
 }
 
 .video-profile-welcome {
-    text-align: center;
     font-size: 20px;
+    text-align: center;
 }
 
 /* Curve */
 .video-profile-curve {
-    position: absolute;
     bottom: -1px;
     left: 0;
-    width: 100%;
     line-height: 0;
+    position: absolute;
+    width: 100%;
     z-index: 3;
 }
 
 .video-profile-curve svg {
     display: block;
-    width: 100%;
     height: 100px;
+    width: 100%;
 }
 
 .video-profile-curve path {
     fill: #fff;
 }
+
+/* ========================================
+   Footer
+   ======================================== */
+footer {
+    background-color: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right p {
+    margin: 5px 0;
+}
+
+.footer-right a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+.social-media a {
+    color: #4caf50;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   Responsive / Media Queries
+   ======================================== */
 @media (max-width: 480px) {
     .navigasi {
         font-size: 18px;
     }
+
     ul {
         padding: 5px;
     }
+
     .jdl {
         font-size: 28px;
     }
+
     .logo-jurusan {
-        grid-template-columns: 1fr 1fr 1fr;
         gap: 2rem;
+        grid-template-columns: 1fr 1fr 1fr;
         justify-content: center;
     }
+
     .logo-jurusan img {
         height: 70px;
     }
+
+    .coming-soon-section {
+        padding: 55px 0;
+    }
+
+    .coming-soon-card {
+        padding: 30px 20px;
+    }
+
+    .logo-wrapper {
+        height: 180px;
+    }
+
+    .coming-soon-status h4 {
+        font-size: 15px;
+    }
+
     .footer-content {
         font-size: 10px;
     }
+
     .video-profile {
         padding: 70px 20px 120px;
     }
+
+    .video-profile-heading h2 {
+        font-size: 32px;
+    }
+
     .video-profile-heading h3 {
         font-size: 14px;
         line-height: 1.5;
     }
-    .video-profile-heading h2 {
-        font-size: 32px;
-    }
+
     .video-profile-content {
         font-size: 15px;
         line-height: 1.7;
     }
+
     .video-profile-welcome {
         font-size: 17px;
     }
+
     .video-profile-curve svg {
         height: 60px;
     }
