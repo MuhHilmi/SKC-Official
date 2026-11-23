@@ -20,9 +20,9 @@
     <title>SMK Kesehatan Cianjur</title>
 </head>
 
-<body class="container-fluid">
+<body>
     <main>
-        <header class="navigasi">
+        <header class="container-fluid navigasi">
             @include('layout.navbar2')
         </header>
 
@@ -59,6 +59,44 @@
                     <a href="#">Daftar Sekarang</a>
                 </div>
             </div>
+
+            <section class="coming-soon-section py-5">
+                <div class="container">
+                    <!-- Logo Card -->
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6 col-sm-8">
+                            <div class="coming-soon-card">
+
+                                <div class="card-label">
+                                    <span>NEW PROGRAM</span>
+                                </div>
+
+                                <h5 class="logo-name">Asisten Keperawatan Gigi</h5>
+
+                                <div class="logo-wrapper">
+                                    <img
+                                        src="pic/LOGO_AKG.png"
+                                        alt="Asisten Keperawatan Gigi Logo"
+                                        class="school-logo"
+                                    >
+                                </div>
+
+                                <div class="coming-soon-status">
+                                    <span class="status-line"></span>
+                                    <h4>COMING SOON</h4>
+                                    <span class="status-line"></span>
+                                </div>
+
+                                <p class="card-description">
+                                    Stay tuned for something exciting!
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </section>
 
         <section class="video-profile">
