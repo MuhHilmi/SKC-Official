@@ -10,6 +10,7 @@
     {{-- Local Style --}}
     <link rel="stylesheet" href="{{ asset('css/navbarstyle.css') }}">
     <link rel="stylesheet" href="{{ asset('css/skcofficialstyle.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/partner-carousel.css') }}">
 
     {{-- style css bootstrap --}}
     <link href="{{ asset('dist/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -96,7 +97,6 @@
                     </div>
                 </div>
             </section>
-
         </section>
 
         <section class="video-profile">
@@ -158,6 +158,78 @@
                     </path>
                 </svg>
             </div> --}}
+        </section>
+
+        <section class="partner-section py-5">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h3>Mitra Kerjasama Kami</h3>
+                    <p class="text-muted">
+                        Bersama mitra terpercaya untuk berkembang
+                    </p>
+                </div>
+                <div class="logo-carousel">
+                    <div class="logo-track">
+                        <!-- Logo Original -->
+                        <div class="logo-item">
+                            <img src="{{ asset('pic/Logo/AsuransiUmumBUMIDA.png') }}" alt="Logo Asuransi Umum BUMIDA">
+                        </div>
+                        <div class="logo-item">
+                            <img src="{{ asset('pic/Logo/BPBD.png') }}" alt="Logo BPBD">
+                        </div>
+                        <div class="logo-item">
+                            <img src="{{ asset('pic/Logo/KimiaFarma.svg') }}" alt="Logo Kimia Farma">
+                        </div>
+                        <div class="logo-item">
+                            <img src="{{ asset('pic/Logo/KodimCianjur.png') }}" alt="Logo Kodim Cianjur">
+                        </div>
+                        <div class="logo-item">
+                            <img src="{{ asset('pic/Logo/PrimaHigienaSarana.png') }}" alt="Logo Prima Higiena Sarana">
+                        </div>
+                        <div class="logo-item">
+                            <img src="{{ asset('pic/Logo/RSBhayangkaraCianjur.png') }}" alt="Logo RS Bhayangkara">
+                        </div>
+                        <div class="logo-item">
+                            <img src="{{ asset('pic/Logo/RSEdelweiss.png') }}" alt="Logo RS Edelweiss">
+                        </div>
+                        <div class="logo-item">
+                            <img src="{{ asset('pic/Logo/RSUDCimacan.png') }}" alt="Logo RSUD Cimacan">
+                        </div>
+                        <div class="logo-item">
+                            <img src="{{ asset('pic/Logo/RSUDSayangCianjur.png') }}" alt="Logo RSUD Sayang Cianjur">
+                        </div>
+
+                        <!-- Duplikasi Logo untuk Infinite Loop -->
+                        <div class="logo-item">
+                            <img src="{{ asset('pic/Logo/AsuransiUmumBUMIDA.png') }}" alt="Logo Asuransi Umum BUMIDA">
+                        </div>
+                        <div class="logo-item">
+                            <img src="{{ asset('pic/Logo/BPBD.png') }}" alt="Logo BPBD">
+                        </div>
+                        <div class="logo-item">
+                            <img src="{{ asset('pic/Logo/KimiaFarma.svg') }}" alt="Logo Kimia Farma">
+                        </div>
+                        <div class="logo-item">
+                            <img src="{{ asset('pic/Logo/KodimCianjur.png') }}" alt="Logo Kodim Cianjur">
+                        </div>
+                        <div class="logo-item">
+                            <img src="{{ asset('pic/Logo/PrimaHigienaSarana.png') }}" alt="Logo Prima Higiena Sarana">
+                        </div>
+                        <div class="logo-item">
+                            <img src="{{ asset('pic/Logo/RSBhayangkaraCianjur.png') }}" alt="Logo RS Bhayangkara">
+                        </div>
+                        <div class="logo-item">
+                            <img src="{{ asset('pic/Logo/RSEdelweiss.png') }}" alt="Logo RS Edelweiss">
+                        </div>
+                        <div class="logo-item">
+                            <img src="{{ asset('pic/Logo/RSUDCimacan.png') }}" alt="Logo RSUD Cimacan">
+                        </div>
+                        <div class="logo-item">
+                            <img src="{{ asset('pic/Logo/RSUDSayangCianjur.png') }}" alt="Logo RSUD Sayang Cianjur">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         @include('layout.footer2')
